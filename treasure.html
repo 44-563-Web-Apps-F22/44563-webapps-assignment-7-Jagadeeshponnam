@@ -34,97 +34,49 @@
        <p class="font-weight-bold">Help report</p> 
     </div>
     <br>
-    <div class="container">
-    <button type="button"   class="btn btn-primary"   onclick="newGame()">New Game</button>
-    </div>
-    <br>
-
-    
-
-
     <div class="container"> 
         <div class="image-row d-flex">
             <div >
                 <img id ="p0" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(0)">
-            </div>
-            <div >
-                <img id ="p1" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(1)">
-            </div>
-            <div > 
+                <img id ="p1" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(1)"> 
                 <img id ="p2" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(2)">
-            </div>
-            <div >
                 <img id ="p3" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(3)">
-            </div>
-            <div>
                 <img id ="p4" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(4)">
             </div>
         </div>
         <div class="image-row d-flex">
             <div>
                 <img id ="p5" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(5)">
-            </div>
-            <div>
                 <img id ="p6" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(6)">
-            </div>
-            <div >
                 <img id ="p7" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(7)">
-            </div>
-            <div >
                 <img id ="p8" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(8)">
-            </div>
-            <div >
                 <img id ="p9" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(9)">
             </div>
         </div>
         <div class="image-row d-flex">
             <div >
                 <img id ="p10" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(10)">
-            </div>
-            <div >
                 <img id ="p11" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(11)">
-            </div>
-            <div >
                 <img id ="p12" src="Help.jpg" alt="treasureChest" height="150" width="150" onclick="help()">
-            </div>
-            <div >
                 <img id ="p13" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(13)">
-            </div>
-            <div >
                 <img id ="p14" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(14)">
             </div>
         </div>
         <div class="image-row d-flex">
             <div>
                 <img id ="p15" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(15)">
-            </div>
-            <div >
                 <img id ="p16" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(16)">
-            </div>
-            <div >
                 <img id ="p17" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(17)">
-            </div>
-            <div >
                 <img id ="p18" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(18)">
-            </div>
-            <div>
                 <img id ="p19" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(19)">
             </div>
         </div>   
         <div class="image-row d-flex">
             <div >
-                <img id ="p20" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(20)">
-            </div class="col">
-            <div>
+                <img id ="p20" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(20)"> 
                 <img id ="p21" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(21)">
-            </div>
-            <div>
                 <img id ="p22" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(22)">
-            </div>
-            <div>
                 <img id ="p23" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(23)">
-            </div>
-            <div>
                 <img id ="p24" src="Trchest.jpg" alt="treasureChest" height="150" width="150" onclick="check(24)">
             </div>
         </div>
@@ -150,10 +102,8 @@
         chestCount++
         score = score+1
         document.getElementById("chests").innerHTML = "Number of chests checked is "+chestCount
-        document.getElementById("score").innerHTML = "Score is "+score
-        
+        document.getElementById("score").innerHTML = "Score is "+score   
         lastCheck = position
-       
     }
 
     function help(){
@@ -184,28 +134,8 @@
         else{
             document.getElementById("help").innerHTML = "Sorry, no help available"
         }
-
     }
-
     
-    function newGame(){
-        treasureLocation = Math.floor(Math.random() * 25)
-       if(treasureLocation == 12)
-        {
-        treasureLocation = Math.floor(Math.random() * 25)
-         }
-       
-        document.getElementById("chests").innerHTML = "Number of chests checked is 0"
-        document.getElementById("score").innerHTML = "Score is 0"
-        for (var i = 0; i <= 24; i++) {
-            if(i != 12)
-                document.getElementById(ids[i]).src = "./Trchest.jpeg"
-        }
-
-
-    }
-
-
     </script>    
 </body>
 </html>
