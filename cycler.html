@@ -56,23 +56,15 @@
 		<button onclick="makeNewDiv()" class="btn btn-primary" >Add value</button>
         <button onclick="get()" class="btn btn-info" >Get</button>
         <button onclick="spin()" class="btn btn-light" >Spin</button>
-        <button onclick="swap()" class="btn btn-secondary" >Swap</button>
-
-        
-	
-	
 </body>
 <script>
 	function makeNewDiv(){
-		/* make the div and its text */
 		let element = document.createElement("div")
 		element.innerHTML = document.getElementById("inputElement").value 
 		element.style.color = "orange"
         element.className = "cycler"
-		/* add it to the container */
 		let container = document.getElementById('target')
 		container.appendChild(element)
-		
 	}
     function get(){ 
         var cyclerItems= []
@@ -94,49 +86,6 @@
         }
 
 
-    }
-
-    function swap(){
-      var cyclerItems=document.getElementsByClassName("cycler")
-        var length=cyclerItems.length
-        var rd1=Math.floor(Math.random()*(length-1))
-        var rd2=Math.floor(Math.random()*(length-1))
-        console.log(rd1)
-        console.log(rd2)
-
-        if(rd1==rd2){
-          rd2+=1
-        }
-
-        if(length==2){
-            swapElement=document.createElement("div")
-            swapElement.innerHTML=cyclerItems[1].textContent
-            swapElement.className="cycler"
-            cyclerItems[1].remove()
-            var container=document.getElementById("target")
-            container.insertBefore(swapElement,cyclerItems[0])
-        }
-
-        else if(length>2){
-            swap1=document.createElement("div")
-            swap1.innerHTML=cyclerItems[rd1].textContent
-            swap1.className="cycler"
-            swap1.style.color = "navyblue"
-
-            swap2=document.createElement("div")
-            swap2.innerHTML=cyclerItems[rnd2].textContent
-            swap2.className="cycler"
-            swap2.style.color = "red"
-            
-
-            cyclerItems[rd1].remove()
-            var container=document.getElementById("target")
-            container.insertBefore(swap1,cyclerItems[rd2-1])
-
-            cyclerItems[rd2].remove()
-            var container=document.getElementById("target")
-            container.insertBefore(swap2,cyclerItems[rd1])
-        }
     }
 
 </script>
